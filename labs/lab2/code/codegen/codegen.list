@@ -1,0 +1,56 @@
+
+codegen.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <part_a>:
+   0:	ldr	r2, [pc, #28]	; 24 <part_a+0x24>
+   4:	ldr	r3, [r2]
+   8:	rsb	r3, r3, #0
+   c:	add	r3, r3, r3, lsl #2
+  10:	lsl	r3, r3, #1
+  14:	bic	r1, r3, #16
+  18:	mul	r3, r1, r3
+  1c:	str	r3, [r2]
+  20:	bx	lr
+  24:	.word	0x00000000
+
+00000028 <part_b>:
+  28:	ldr	r3, [pc, #20]	; 44 <part_b+0x1c>
+  2c:	ldr	r3, [r3]
+  30:	cmp	r3, #4
+  34:	addle	r3, r3, #1
+  38:	ldr	r2, [pc, #4]	; 44 <part_b+0x1c>
+  3c:	str	r3, [r2]
+  40:	bx	lr
+  44:	.word	0x00000000
+
+00000048 <part_c>:
+  48:	mov	r3, #16128	; 0x3f00
+  4c:	subs	r3, r3, #1
+  50:	bne	4c <part_c+0x4>
+  54:	bx	lr
+
+00000058 <part_d>:
+  58:	ldr	r3, [pc, #40]	; 88 <part_d+0x30>
+  5c:	ldr	r1, [r3]
+  60:	mov	r2, #107	; 0x6b
+  64:	str	r2, [r3]
+  68:	strb	r2, [r3]
+  6c:	mov	r2, #13
+  70:	str	r2, [r3, #20]
+  74:	strb	r2, [r3, #5]
+  78:	ldr	r2, [r3, r1, lsl #2]
+  7c:	ldr	r2, [r3, r2, lsl #2]
+  80:	str	r2, [r3]
+  84:	bx	lr
+  88:	.word	0x00000000
+
+0000008c <main>:
+  8c:	push	{r3, lr}
+  90:	bl	0 <part_a>
+  94:	bl	28 <part_b>
+  98:	bl	58 <part_d>
+  9c:	pop	{r3, lr}
+  a0:	bx	lr

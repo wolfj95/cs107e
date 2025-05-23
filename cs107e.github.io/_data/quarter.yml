@@ -1,0 +1,73 @@
+# This is the data file to edit when setting up a new quarter
+# The home page and schedule will be generated using these settings
+---
+name: Spring 2020
+instructors: 
+    - name: Philip Levis
+      img: /_assets/phil.png
+cas:
+    - name: Sean Konz
+      img: /_assets/sean.png
+    - name: Peter McEvoy
+      img: /_assets/peter.png
+sls: 
+    - name: Jane Lange 
+      img: /_assets/jane.png
+lectures: Mon and Fri 3:00-4:20pm (PDT) on Zoom
+labs: Wed 1-3pm, 3-5pm, 5-7pm (PDT) on Zoom
+forum: 'https://piazza.com/stanford/spring2020/cs107e'
+weeks:
+    # start is date of first lecture (a Monday)
+    # due date-time is for assign1 (will assume weekly repeat thereafter)
+  - start_date: "2020-04-06"
+    assign1_duedate: "2020-04-21 8:00 PM"
+    mon: /lectures/Intro/
+    lab: No lab in first week
+    assign: /assignments/assign0/
+    fri: /lectures/ARM/
+  - 
+    mon: /lectures/ASM/
+    lab: /labs/lab1/
+    assign: /assignments/assign1/
+    fri: /lectures/C_Control/
+  -
+    mon: /lectures/C_Pointers/
+    lab: /labs/lab2/
+    assign: /assignments/assign2/
+    fri: /lectures/C_Functions/ 
+  -
+    mon: /lectures/Serial/ 
+    lab: /labs/lab3/
+    assign: /assignments/assign3/
+    fri: /lectures/Linking/
+  -
+    mon: /lectures/Memory/ 
+    lab: /labs/lab4/
+    assign: /assignments/assign4/
+    fri: /lectures/C_Mastery/
+  -
+    mon: /lectures/Keyboard/
+    lab: /labs/lab5/
+    assign: /assignments/assign5/
+    fri: /lectures/Framebuffer/
+  -
+    mon: /lectures/Interrupts1/ 
+    lab: /labs/lab6/
+    assign: /assignments/assign6/
+    fri: /lectures/Interrupts2/
+  -
+    mon: Memorial Day Holiday
+    lab: /labs/lab7/
+    assign: /assignments/assign7/
+    fri: lectures/MakingEngineering
+  -
+    mon: /lectures/ArithmeticAndSensors/
+    lab: /labs/projectlab1/
+    assign: /assignments/project/
+    fri: Guest Lecture
+  -
+    mon: /lectures/Wrap/ 
+    lab: Project due
+    fri: No class
+  -
+    project_due: "2020-06-10"
