@@ -10,7 +10,7 @@
 
 .equ DELAY, 0x3F000
 .equ FSELSPACE, 0x3
-.equ NUMLED, 0x5
+.equ NUMLED, 0x8
 
 // configure GPIO in FSEL2 for output
 ldr r0, FSEL2

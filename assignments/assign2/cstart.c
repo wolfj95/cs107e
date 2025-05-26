@@ -18,9 +18,9 @@ void _cstart(void)
 
     main();
 
-    // Turn on the green ACT LED (GPIO 29)
-    volatile unsigned int *GPIO_FSEL2  = (unsigned int *)0x3f200008;
-    volatile unsigned int *GPIO_SET0   = (unsigned int *)0x3f20001C;
-    *GPIO_FSEL2 = (*GPIO_FSEL2 & ~(7 << 3*9)) | (1 << 3*9);
-    *GPIO_SET0 = 1 << 29;
+    // Turn on the green ACT LED (GPIO 47)
+    volatile unsigned int *GPIO_FSEL4  = (unsigned int *)0x20200010;
+    volatile unsigned int *GPIO_SET1   = (unsigned int *)0x20200020;
+    *GPIO_FSEL4 = (*GPIO_FSEL4 & ~(7 << 21)) | (1 << 21);
+    *GPIO_SET1 = 1 << 15;
 }
