@@ -135,11 +135,11 @@ bne  loopledsup
 
 b loopforever
 
-FSEL0: .word 0x3F200000
-FSEL1: .word 0x3F200004
-FSEL2: .word 0x3F200008
-SET0:  .word 0x3F20001C
-SET1:  .word 0x3F200020
-CLR0:  .word 0x3F200028
-CLR1:  .word 0x3F20002C
+FSEL0: .word 0x20200000
+FSEL1: .word 0x20200004
+FSEL2: .word 0x20200008
+SET0:  .word 0x2020001C
+SET1:  .word 0x20200020
+CLR0:  .word 0x20200028
+CLR1:  .word 0x2020002C
 
