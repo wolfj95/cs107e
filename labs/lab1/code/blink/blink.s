@@ -32,11 +32,11 @@ wait2:
 
 b loop
 
-FSEL0: .word 0x3f200000
-FSEL1: .word 0x3f200004
-FSEL2: .word 0x3f200008
-SET0:  .word 0x3f20001C
-SET1:  .word 0x3f200020
-CLR0:  .word 0x3f200028
-CLR1:  .word 0x3f20002C
+FSEL0: .word 0x20200000
+FSEL1: .word 0x20200004
+FSEL2: .word 0x20200008
+SET0:  .word 0x2020001C
+SET1:  .word 0x20200020
+CLR0:  .word 0x20200028
+CLR1:  .word 0x2020002C
 
