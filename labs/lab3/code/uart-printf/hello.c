@@ -10,9 +10,14 @@ void main (void)
     uart_init();    // must set up uart peripheral before using, init once
 
     for (int i = 0; i < 5; i++) {
+        printf("it: %d\n", i);
         uart_putstring("hello, laptop\n");
         timer_delay(1);
     }
+    printf("Pre FSEL2 value: %x\n", *FSEL2);
+    gpio_set_function(20, 1);
+    gpio_set_function(21, 1);
+    printf("Post FSEL2 value: %x\n", *FSEL2);
     printf("We %s printf!\n", "<3");
     
     uart_putchar(EOT); // not strictly necessary, but signals to rpi-install that program is done

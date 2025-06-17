@@ -17,7 +17,12 @@ static size_t strlen(const char *str)
 
 static char *strcpy(char *dst, const char *src)
 {
-    // Your turn -- implement strcpy!
+    int n = 0;
+    while (true) {
+        dst[n] = src[n];
+        if (src[n] == '\0'){ break; }
+        n++;
+    }
     return dst;
 }
 
@@ -81,9 +86,9 @@ void main(void)
     uart_init();
 
     test_strlen();
-    //test_strcpy("CS107e rocks");
-    //stress_test_strlen();
-    //stress_test_strcpy();
+    test_strcpy("CS107e rocks");
+    // stress_test_strlen();
+    stress_test_strcpy();
     
     uart_putchar(EOT);
 }
