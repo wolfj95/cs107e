@@ -12,6 +12,17 @@ static void test_memset(void)
 
     memset(&numB, 0xef, sizeof(int));
     assert(numA == numB);
+
+    char org_str[50] = "GeeksForGeeks is for programming geeks.";
+    char comp_str[50] = "GeeksForGeeks........programming geeks.";
+    memset(org_str + 13, '.', 8*sizeof(char));
+    assert(strcmp(org_str, comp_str) == 0);
+    
+    // // string
+    // char buffer[4];
+    // char test_string[4] = {'A', 'A', 'A', 'A'};
+    // memset(&buffer, 'A', sizeof(buffer));
+    // assert(buffer == test_string);
 }
 
 static void test_memcpy(void)
@@ -21,6 +32,11 @@ static void test_memcpy(void)
 
     memcpy(&numB, &numA, sizeof(int));
     assert(numA == numB);
+
+    char org_str[50] = "GeeksForGeeks is for programming geeks.";
+    char comp_str[50] = "i'm a new string!";
+    memcpy(org_str, comp_str, 50*sizeof(char));
+    assert(strcmp(org_str, comp_str) == 0);
 }
 
 static void test_strlen(void)
@@ -125,8 +141,8 @@ void main(void)
     uart_init();
     uart_putstring("Start execute main() in tests/test_strings_printf.c\n");
 
-    // test_memset();
-    // test_memcpy();
+    test_memset();
+    test_memcpy();
     test_strlen();
     test_strcmp();
     // test_strlcat();

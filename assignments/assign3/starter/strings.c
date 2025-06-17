@@ -2,14 +2,23 @@
 
 void *memset(void *s, int c, size_t n)
 {
-    /* TODO: Your code here */
-    return NULL;
+    char *char_s = (char *)s;
+    for (size_t i = 0; i < n; i++)
+    {
+        char_s[i] = (unsigned char) c;
+    }
+    return s;
 }
 
 void *memcpy(void *dst, const void *src, size_t n)
 {
-    /* TODO: Your code here */
-    return NULL;
+    unsigned char *char_dst = (unsigned char *)dst;
+    unsigned char *char_src = (unsigned char *)src;
+    for (size_t i = 0; i < n; i++)
+    {
+        char_dst[i] = char_src[i];
+    }
+    return dst;
 }
 
 size_t strlen(const char *s)
