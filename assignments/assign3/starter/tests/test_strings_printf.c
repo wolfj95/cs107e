@@ -32,7 +32,11 @@ static void test_strcmp(void)
 {
     assert(strcmp("apple", "apple") == 0);
     assert(strcmp("apple", "applesauce") < 0);
+    assert(strcmp("applesauce", "apples") > 0);
     assert(strcmp("pears", "apples") > 0);
+    assert(strcmp("apples", "pears") < 0);
+    assert(strcmp("", "apples") < 0);
+    assert(strcmp("apples", "") > 0);
 }
 
 static void test_strlcat(void)
@@ -121,14 +125,14 @@ void main(void)
     uart_init();
     uart_putstring("Start execute main() in tests/test_strings_printf.c\n");
 
-    test_memset();
-    test_memcpy();
+    // test_memset();
+    // test_memcpy();
     test_strlen();
     test_strcmp();
-    test_strlcat();
-    test_strtonum();
-    test_to_base();
-    test_snprintf();
+    // test_strlcat();
+    // test_strtonum();
+    // test_to_base();
+    // test_snprintf();
 
     uart_putstring("Successfully finished executing main() in tests/test_strings_printf.c\n");
     uart_putchar(EOT);

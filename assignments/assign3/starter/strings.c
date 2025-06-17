@@ -24,7 +24,28 @@ size_t strlen(const char *s)
 
 int strcmp(const char *s1, const char *s2)
 {
-    /* TODO: Your code here */
+    int n = 0;
+    while (1) {
+        if (s1[n] == '\0' || s2[n] == '\0') {
+            if (s1[n] == '\0' && s2[n] != '\0') {
+                return -1;
+            }
+            if (s1[n] != '\0' && s2[n] == '\0') {
+                return 1;
+            }
+            break;
+        }
+        if (s1[n] != s2[n]) 
+        {
+            if (s1[n] > s2[n])
+            {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+        n++;
+    }
     return 0;
 }
 
